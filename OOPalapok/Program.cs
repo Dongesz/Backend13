@@ -10,13 +10,19 @@ namespace OOPalapok
     {
         public string Name { get; set; }
         public int Age { get; set; }
+
+        public Szemely(string name, int age) 
+        {
+            Name = name;
+            Age = age;
+        }
         
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Szemely person = new Szemely { Name = "peti", Age = 20 };
+            Szemely person = new Szemely("Peti", 20);
             Console.WriteLine($"A szemely neve: {person.Name}");
             Console.WriteLine($"Eletkora: {person.Age}");
         }
