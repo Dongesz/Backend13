@@ -8,23 +8,25 @@ namespace OOPalapok
 {
     public class Szemely
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+        private string name { get; set; }
+        private int age { get; set; }
 
-        public Szemely(string name, int age) 
+        public Szemely(string Name, int Age) 
         {
-            Name = name;
-            Age = age;
+            name = Name;
+            age = Age;
         }
-        
+        public string kiir()
+        {
+            return $"A szemely neve: {name} \nEletkora: {age}";
+        }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
             Szemely person = new Szemely("Peti", 20);
-            Console.WriteLine($"A szemely neve: {person.Name}");
-            Console.WriteLine($"Eletkora: {person.Age}");
+            Console.WriteLine(person.kiir());
         }
     }
 }
