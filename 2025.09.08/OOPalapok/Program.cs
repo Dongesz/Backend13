@@ -24,7 +24,7 @@ namespace OOPalapok
             Age = age;
         }
         
-        public string kiir()
+        public string ToString()
         {
             return $"A szemely neve: {_name} \nEletkora: {Age}";
         }
@@ -34,7 +34,7 @@ namespace OOPalapok
         static void Main(string[] args)
         {
             Szemely person = new Szemely("Peti", 14);
-            Console.WriteLine(person.kiir());
+            Console.WriteLine(person.ToString());
         }
     }
 }
