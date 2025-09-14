@@ -69,14 +69,26 @@ namespace OOPalapok
         
         public string ToString()
         {
-            return $"Ez itt a nevem:{_name}, ez prdig a neptune codeom: {NeptuneCode}";
+            return $"Hallgato neve: {_name}";
         }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            
+            var hallgatok = new List<Hallgato>
+            {
+                new Hallgato("Peti", 19, "213145"),
+                new Hallgato("Pali", 23, "223515"),
+                new Hallgato("Laci", 18, "234575"),
+                new Hallgato("Zsolt", 20, "293455")
+            };
+
+            foreach (var item in hallgatok)
+            {
+                Console.WriteLine(item.ToString());
+            }
+
         }
     }
 }
