@@ -9,7 +9,7 @@ namespace OOPalapok
 {
     public class Szemely
     {
-        public string _name;
+        protected string _name;
         private int _age;
         
         public int Age
@@ -62,7 +62,7 @@ namespace OOPalapok
         
         public string ToString()
         {
-            return $"Ez itt a nevem:{_name}, ez prdig a neptune codeom: {_neptunecode}"
+            return $"Ez itt a nevem:{_name}, ez prdig a neptune codeom: {_neptunecode}";
         }
     }
     internal class Program
