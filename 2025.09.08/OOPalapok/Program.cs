@@ -9,7 +9,7 @@ namespace OOPalapok
 {
     public class Szemely
     {
-        private string _name;
+        public string _name;
         private int _age;
         
         public int Age
@@ -49,6 +49,21 @@ namespace OOPalapok
             Balance -= balance;
         }
 
+    }
+    public class Hallgato : Szemely
+    {
+        private string _neptunecode;
+
+        public Hallgato(string name, int age, string neptunecode) : base(name, age)
+        {
+
+            _neptunecode = neptunecode;
+        }
+        
+        public string ToString()
+        {
+            return $"Ez itt a nevem:{_name}, ez prdig a neptune codeom: {_neptunecode}"
+        }
     }
     internal class Program
     {
