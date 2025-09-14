@@ -1,0 +1,15 @@
+C:\Users\majorosmm\Backtend13\OOPalapok\OOPalapok\bin\Debug\OOPalapok.exe.config
+C:\Users\majorosmm\Backtend13\OOPalapok\OOPalapok\bin\Debug\OOPalapok.exe
+C:\Users\majorosmm\Backtend13\OOPalapok\OOPalapok\bin\Debug\OOPalapok.pdb
+C:\Users\majorosmm\Backtend13\OOPalapok\OOPalapok\obj\Debug\OOPalapok.csproj.AssemblyReference.cache
+C:\Users\majorosmm\Backtend13\OOPalapok\OOPalapok\obj\Debug\OOPalapok.csproj.CoreCompileInputs.cache
+C:\Users\majorosmm\Backtend13\OOPalapok\OOPalapok\obj\Debug\OOPalapok.exe
+C:\Users\majorosmm\Backtend13\OOPalapok\OOPalapok\obj\Debug\OOPalapok.pdb
+D:\Dev\School\Backend13\2025.09.08\OOPalapok\obj\Debug\OOPalapok.csproj.AssemblyReference.cache
+D:\Dev\School\Backend13\2025.09.08\OOPalapok\obj\Debug\OOPalapok.exe.config
+D:\Dev\School\Backend13\2025.09.08\OOPalapok\obj\Debug\OOPalapok.csproj.CoreCompileInputs.cache
+D:\Dev\School\Backend13\2025.09.08\OOPalapok\obj\Debug\OOPalapok.exe
+D:\Dev\School\Backend13\2025.09.08\OOPalapok\obj\Debug\OOPalapok.pdb
+D:\Dev\School\Backend13\2025.09.08\OOPalapok\bin\Debug\OOPalapok.exe.config
+D:\Dev\School\Backend13\2025.09.08\OOPalapok\bin\Debug\OOPalapok.exe
+D:\Dev\School\Backend13\2025.09.08\OOPalapok\bin\Debug\OOPalapok.pdb
