@@ -15,7 +15,7 @@ namespace OOPalapok
         public int Age
         {
             get => _age;
-            set => _age = value < 0 ? 0 : value;
+            set => _age = value < 0 ? throw new ArgumentOutOfRangeException(nameof(_age), "Age must be positive!") : value;
 
         }
         public Szemely(string name, int age)
@@ -36,7 +36,7 @@ namespace OOPalapok
         public int Balance
         {
             get => _balance;
-            set => _balance = value < 0 ? 0 : value;
+            set => _balance = value < 0 ? throw new ArgumentOutOfRangeException(nameof(_balance), "Balance must be positive!") : value;
         }
 
         public void Betesz(int balance)
@@ -54,23 +54,29 @@ namespace OOPalapok
     {
         private string _neptunecode;
 
+        public string NeptuneCode
+        {
+            get => _neptunecode;
+            set => _neptunecode = value.Length > 6? throw new ArgumentOutOfRangeException(nameof(_neptunecode), "Neptun code too long!") : _neptunecode;
+        }
+
+
         public Hallgato(string name, int age, string neptunecode) : base(name, age)
         {
 
-            _neptunecode = neptunecode;
+            NeptuneCode = neptunecode;
         }
         
         public string ToString()
         {
-            return $"Ez itt a nevem:{_name}, ez prdig a neptune codeom: {_neptunecode}";
+            return $"Ez itt a nevem:{_name}, ez prdig a neptune codeom: {NeptuneCode}";
         }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Szemely person = new Szemely("Peti", 14);
-            Console.WriteLine(person.ToString());
+            
         }
     }
 }
