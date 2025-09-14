@@ -29,6 +29,27 @@ namespace OOPalapok
             return $"A szemely neve: {_name} \nEletkora: {Age}";
         }
     }
+    public class BankSzamla
+    {
+        private int _balance;
+
+        public int Balance
+        {
+            get => _balance;
+            set => _balance = value < 0 ? 0 : value;
+        }
+
+        public void Betesz(int balance)
+        {
+            Balance += balance;
+        }
+
+        public void Kivesz(int balance)
+        {
+            Balance -= balance;
+        }
+
+    }
     internal class Program
     {
         static void Main(string[] args)
