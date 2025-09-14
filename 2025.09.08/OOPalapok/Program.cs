@@ -28,6 +28,10 @@ namespace OOPalapok
         {
             return $"A szemely neve: {_name} \nEletkora: {Age}";
         }
+        public virtual string Bemutatkozas()
+        {
+            return $"Szia a nevem {_name}";
+        }
     }
     public class BankSzamla
     {
@@ -57,7 +61,7 @@ namespace OOPalapok
         public string NeptuneCode
         {
             get => _neptunecode;
-            set => _neptunecode = value.Length > 6? throw new ArgumentOutOfRangeException(nameof(_neptunecode), "Neptun code too long!") : _neptunecode;
+            set => _neptunecode = value.Length > 6? throw new ArgumentOutOfRangeException(nameof(_neptunecode), "Neptun code too long!") : value;
         }
 
 
@@ -71,6 +75,23 @@ namespace OOPalapok
         {
             return $"Hallgato neve: {_name}";
         }
+        public override string Bemutatkozas()
+        {
+            return $"Szia a nevem {_name}, neptune kodom {NeptuneCode}.";
+        }
+    }
+    public class Dolgozo : Szemely
+    {
+        private int _ber;
+        public Dolgozo(string name, int age, int ber) : base(name, age)
+        {
+            _ber = ber;
+        }
+        public override string Bemutatkozas()
+        {
+            return $"Szia a nevem {_name}, a berem {_ber}Ft.";
+        }
+
     }
     internal class Program
     {
@@ -88,6 +109,12 @@ namespace OOPalapok
             {
                 Console.WriteLine(item.ToString());
             }
+
+            Dolgozo dolgozo1 = new Dolgozo("Ali", 34, 4000000);
+            Hallgato hallgato1 = new Hallgato("Pityesz", 67, "323232");
+
+            Console.WriteLine(dolgozo1.Bemutatkozas());
+            Console.WriteLine(hallgato1.Bemutatkozas());
 
         }
     }
