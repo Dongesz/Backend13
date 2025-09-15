@@ -54,7 +54,14 @@ namespace OOPadatbazis
                 dbCon.Password = "";
                 if (dbCon.IsConnect())
                 {
-                    Console.WriteLine("Sikeres csatlakozas!");
+                    string query = "Select * from books;";
+                    var cmd = new MySqlCommand(query, dbCon.Connection);
+                    var reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Console.WriteLine($"{reader[0]} {reader[1]} {reader[2]} {reader[3]}");
+
+                    }
                 }
                     dbCon.Close();
                 }
