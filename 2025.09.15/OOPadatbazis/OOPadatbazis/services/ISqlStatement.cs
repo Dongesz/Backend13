@@ -8,8 +8,6 @@ namespace OOPadatbazis.services
 {
     internal interface ISqlStatement
     {
-        List<object> GetAllBooks();
-
-            
+        List<Book> GetAllBooks();       
     }
 }
