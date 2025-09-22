@@ -38,6 +38,9 @@ namespace OOPadatbazis
                 // AddNewBook
                 var book2 = new { title = "harry potter", author = "JKrowling",release = new DateTime(2007, 10, 12) };
                 sqlStatement.AddNewBook(book2);
+                // DeleteById
+                sqlStatement.DeleteById(101);
+                
                 
             }
 

@@ -20,6 +20,16 @@ internal class TableBooks : ISqlStatement
         return book;
     }
 
+    public object DeleteById(int id)
+    {
+        string sql = "delete from books where id = @id";
+        MySqlCommand cmd = new MySqlCommand(sql, _conn);
+
+        cmd.Parameters.AddWithValue("@id", id);
+        cmd.ExecuteNonQuery();
+        return new { Message = "Successful delete!"};
+    }
+
     public List<Book> GetAllBooks()
     {
         var result = new List<Book>();
