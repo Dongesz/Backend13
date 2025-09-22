@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace OOPadatbazis.services
 {
-    internal interface ISqlStatement
+    internal interface ISqlStatement<T>
     {
-        List<Book> GetAllRecords();
-        Book? GetById(int id);
-        object AddNewRecords(object newBook);
-        object DeleteById(int id);
-        object UpdateRecord(int id, object updateobj);
+        List<T> GetAllRecords();
+        T? GetById(int id);
+        long AddNewRecords(T entity);
+        bool DeleteById(int id);
+        bool UpdateRecord(int id, T entity);
     }
 }

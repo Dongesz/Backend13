@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOPadatbazis
 {
@@ -15,7 +11,10 @@ namespace OOPadatbazis
 
         public Cars(int id, string brand, string type, DateTime mdate)
         {
-            Id = id; Brand = brand; Type = type; MDate = mdate;
+            Id = id;
+            Brand = brand;
+            Type = type;
+            MDate = mdate;
         }
 
         public override string ToString()

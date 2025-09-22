@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOPadatbazis
 {
@@ -15,7 +11,10 @@ namespace OOPadatbazis
 
         public Book(int id, string title, string author, DateTime releaseDate)
         {
-            Id = id; Title = title; Author = author; ReleaseDate = releaseDate;
+            Id = id;
+            Title = title;
+            Author = author;
+            ReleaseDate = releaseDate;
         }
 
         public override string ToString()
