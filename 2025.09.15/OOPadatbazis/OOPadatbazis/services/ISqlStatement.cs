@@ -10,4 +10,5 @@ namespace OOPadatbazis.services
         bool DeleteById(int id);
         bool UpdateRecord(int id, T entity);
     }
+
 }

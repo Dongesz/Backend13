@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Sze 15. 11:14
+-- Létrehozás ideje: 2025. Sze 22. 12:09
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -39,7 +39,6 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `title`, `author`, `releaseDate`) VALUES
-(1, 'Opfergang', 'Pammy Tidbury', '2025-05-18'),
 (2, 'Wayward Bus, The', 'Cati Guidi', '2024-09-24'),
 (3, 'Marva Collins Story, The', 'Raychel Shaul', '2025-02-21'),
 (4, 'Petrified Forest, The', 'Desmond Olsson', '2025-09-10'),
@@ -138,7 +137,131 @@ INSERT INTO `books` (`id`, `title`, `author`, `releaseDate`) VALUES
 (97, 'Quiet, The', 'Laird Loftus', '2024-09-30'),
 (98, 'Perfect Holiday, The', 'Christoffer Strelitzer', '2024-11-26'),
 (99, 'My Sister\'s Keeper', 'Ericha Edsall', '2025-08-27'),
-(100, 'Shirin', 'Jodi Gaitley', '2025-08-21');
+(100, 'Shirin', 'Jodi Gaitley', '2025-08-21'),
+(105, 'harry potter', 'JKrowling', '2007-10-12'),
+(106, 'harry potter', 'JKrowling', '2007-10-12'),
+(107, 'harry potter', 'JKrowling', '2007-10-12'),
+(108, 'harry potter', 'JKrowling', '2007-10-12');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `cars`
+--
+
+CREATE TABLE `cars` (
+  `id` int(11) NOT NULL,
+  `brand` text NOT NULL,
+  `type` text NOT NULL,
+  `mDate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `cars`
+--
+
+INSERT INTO `cars` (`id`, `brand`, `type`, `mDate`) VALUES
+(1, 'Mercedes-Benz', 'E-Class', '2024-12-13'),
+(2, 'GMC', 'Yukon', '2025-02-20'),
+(3, 'Porsche', '911', '2024-09-28'),
+(4, 'Ford', 'F-Series', '2024-10-08'),
+(6, 'Mazda', '929', '2025-06-26'),
+(7, 'Chevrolet', 'Corvette', '2024-10-31'),
+(8, 'Dodge', 'Journey', '2024-10-30'),
+(9, 'GMC', 'Rally Wagon G2500', '2024-11-07'),
+(10, 'Chevrolet', 'Aveo', '2024-12-28'),
+(11, 'Mitsubishi', 'Montero Sport', '2025-01-06'),
+(12, 'Hyundai', 'Tiburon', '2025-07-05'),
+(13, 'GMC', 'Savana 1500', '2025-06-25'),
+(14, 'Saab', '9000', '2025-08-08'),
+(15, 'Mitsubishi', 'Tredia', '2025-02-11'),
+(16, 'Mazda', 'Mazda3', '2025-09-04'),
+(17, 'Honda', 'Accord', '2025-04-26'),
+(18, 'Mercedes-Benz', '400SEL', '2024-10-23'),
+(19, 'Acura', 'RL', '2024-12-06'),
+(20, 'Isuzu', 'i-290', '2025-08-31'),
+(21, 'Plymouth', 'Neon', '2025-09-21'),
+(22, 'Nissan', 'Frontier', '2025-05-16'),
+(23, 'Acura', 'MDX', '2025-06-14'),
+(24, 'Saturn', 'VUE', '2025-04-06'),
+(25, 'Honda', 'Civic Si', '2025-09-07'),
+(26, 'Mazda', 'RX-7', '2025-05-21'),
+(27, 'Audi', 'S4', '2025-04-21'),
+(28, 'Acura', 'Legend', '2025-09-08'),
+(29, 'Toyota', 'Matrix', '2025-07-16'),
+(30, 'Honda', 'S2000', '2025-04-11'),
+(31, 'Toyota', 'Prius', '2025-04-10'),
+(32, 'Ford', 'F150', '2025-05-05'),
+(33, 'Toyota', 'Celica', '2025-08-02'),
+(34, 'Chevrolet', 'Suburban 1500', '2024-12-13'),
+(35, 'Buick', 'Hearse', '2024-12-22'),
+(36, 'GMC', 'Envoy XL', '2024-12-07'),
+(37, 'Dodge', 'Dakota', '2024-10-21'),
+(38, 'Jaguar', 'X-Type', '2025-02-05'),
+(39, 'Pontiac', 'Firebird', '2025-07-23'),
+(40, 'Infiniti', 'M', '2024-12-05'),
+(41, 'Mitsubishi', 'i-MiEV', '2025-04-19'),
+(42, 'Volkswagen', 'Rabbit', '2024-10-29'),
+(43, 'Honda', 'Accord', '2025-07-07'),
+(44, 'Bentley', 'Continental GT', '2024-09-28'),
+(45, 'Dodge', 'Viper', '2024-09-26'),
+(46, 'Ferrari', '612 Scaglietti', '2025-07-15'),
+(47, 'Lexus', 'GS', '2025-05-30'),
+(48, 'Cadillac', 'SRX', '2024-11-23'),
+(49, 'Mazda', 'B-Series Plus', '2024-10-13'),
+(50, 'Porsche', 'Boxster', '2025-06-21'),
+(51, 'Lexus', 'IS', '2025-02-10'),
+(52, 'Pontiac', 'Grand Prix', '2025-06-20'),
+(53, 'BMW', 'M6', '2025-04-23'),
+(54, 'Lexus', 'LS', '2024-10-18'),
+(55, 'Nissan', 'Titan', '2025-07-08'),
+(56, 'Oldsmobile', 'LSS', '2025-08-01'),
+(57, 'Chevrolet', 'Malibu', '2025-05-30'),
+(58, 'Dodge', 'Stratus', '2025-08-22'),
+(59, 'Infiniti', 'M', '2024-11-14'),
+(60, 'Audi', 'Cabriolet', '2025-02-05'),
+(61, 'Ford', 'Escape', '2024-12-18'),
+(62, 'Porsche', 'Cayman', '2025-08-26'),
+(63, 'Dodge', 'Ram', '2025-02-22'),
+(64, 'Acura', 'NSX', '2025-01-21'),
+(65, 'GMC', '1500', '2025-02-07'),
+(66, 'Toyota', 'Solara', '2025-03-31'),
+(67, 'GMC', 'Savana 3500', '2025-05-30'),
+(68, 'Pontiac', 'Grand Prix', '2024-09-26'),
+(69, 'Pontiac', 'Bonneville', '2024-10-02'),
+(70, 'Suzuki', 'Aerio', '2025-05-08'),
+(71, 'BMW', '545', '2025-07-15'),
+(72, 'BMW', 'M3', '2025-09-06'),
+(73, 'Mazda', 'Millenia', '2025-07-18'),
+(74, 'Maserati', 'Quattroporte', '2025-04-18'),
+(75, 'Audi', 'TT', '2025-06-20'),
+(76, 'Mercury', 'Grand Marquis', '2025-06-24'),
+(77, 'Mercedes-Benz', 'S-Class', '2025-04-08'),
+(78, 'Mazda', '929', '2025-05-10'),
+(79, 'Acura', 'TL', '2024-12-03'),
+(80, 'Ford', 'Windstar', '2025-09-15'),
+(81, 'Nissan', 'Sentra', '2025-03-06'),
+(82, 'Volkswagen', 'GTI', '2025-03-10'),
+(83, 'Chrysler', 'LHS', '2025-05-13'),
+(84, 'Volkswagen', 'Jetta', '2024-12-17'),
+(85, 'Honda', 'CR-X', '2025-03-19'),
+(86, 'Chevrolet', 'Suburban 1500', '2025-09-14'),
+(87, 'Mercury', 'Mariner', '2025-01-23'),
+(88, 'Mitsubishi', 'Eclipse', '2024-12-27'),
+(89, 'Ford', 'Excursion', '2025-03-30'),
+(90, 'Honda', 'Accord', '2025-02-27'),
+(91, 'Ford', 'Freestar', '2025-09-18'),
+(92, 'Nissan', '350Z', '2025-09-05'),
+(93, 'Mitsubishi', 'Pajero', '2025-02-20'),
+(94, 'Lotus', 'Esprit', '2025-02-22'),
+(95, 'Dodge', 'Dakota', '2024-11-29'),
+(96, 'Nissan', 'JUKE', '2025-07-22'),
+(97, 'Toyota', 'Tacoma Xtra', '2025-01-04'),
+(98, 'BMW', 'M', '2025-02-05'),
+(99, 'Nissan', 'Altima', '2025-07-10'),
+(100, 'Mercury', 'Grand Marquis', '2025-02-07'),
+(101, 'toyota', 'supra', '1999-02-13'),
+(102, 'toyota', 'supra mk4', '1999-01-01');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -151,6 +274,12 @@ ALTER TABLE `books`
   ADD PRIMARY KEY (`id`);
 
 --
+-- A tábla indexei `cars`
+--
+ALTER TABLE `cars`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
@@ -158,7 +287,13 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT a táblához `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+
+--
+-- AUTO_INCREMENT a táblához `cars`
+--
+ALTER TABLE `cars`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

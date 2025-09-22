@@ -30,6 +30,8 @@ namespace OOPadatbazis.services
             return cmd.ExecuteNonQuery() > 0;
         }
 
+       
+
         public List<Book> GetAllRecords()
         {
             var result = new List<Book>();
@@ -95,5 +97,6 @@ namespace OOPadatbazis.services
 
             return cmd.ExecuteNonQuery() > 0;
         }
+
     }
 }
