@@ -84,31 +84,11 @@ namespace OOPadatbazis
 
             if (dbCon.IsConnect())
             {
-                string query = "Select * from books;";
-                var cmd = new MySqlCommand(query, dbCon.Connection);
-                var reader = cmd.ExecuteReader();
-                var books = new List<Book>();
-
-                int ixId = reader.GetOrdinal("id");
-                int ixTitle = reader.GetOrdinal("title");
-                int ixAuthor = reader.GetOrdinal("author");
-                int ixReleaseDate = reader.GetOrdinal("releaseDate");
-
-                while (reader.Read())
-                {
-                    var book = new Book(
-                        reader.GetInt32(ixId),
-                        reader.GetString(ixTitle),
-                        reader.GetString(ixAuthor),
-                        reader.GetDateTime(ixReleaseDate)
-                    );
-
-                    books.Add(book);
-                    Console.WriteLine(book);
+                    Console.WriteLine("Successful connection!");
                 }
 
                 dbCon.Close();
             }
         }
     }
-}
+

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OOPadatbazis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60b008729e91582afc60e66c61a63cc7c6b473b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a88d80c98a4207f702ead2290e8e518a61f4e197")]
 [assembly: System.Reflection.AssemblyProductAttribute("OOPadatbazis")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OOPadatbazis")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
