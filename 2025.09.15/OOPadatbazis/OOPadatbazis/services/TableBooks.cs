@@ -7,7 +7,7 @@ internal class TableBooks : ISqlStatement
     private readonly MySqlConnection _conn;
     public TableBooks(MySqlConnection conn) { _conn = conn; }
 
-    public object AddNewBook(object newBook)
+    public object AddNewRecords(object newBook)
     {
         string sql = "INSERT INTO books (title, author, releaseDate) VALUES (@title, @author, @releaseDate);";
         var cmd = new MySqlCommand(sql, _conn);
@@ -30,7 +30,7 @@ internal class TableBooks : ISqlStatement
         return new { Message = "Successful delete!"};
     }
 
-    public List<Book> GetAllBooks()
+    public List<Book> GetAllRecords()
     {
         var result = new List<Book>();
         const string sql = "SELECT id, title, author, releaseDate FROM books";
@@ -79,5 +79,10 @@ internal class TableBooks : ISqlStatement
             result.Add(book);
         }
         return result;
+    }
+
+    public object UpdateRecord(int id)
+    {
+        
     }
 }

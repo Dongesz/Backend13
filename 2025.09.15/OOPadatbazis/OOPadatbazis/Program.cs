@@ -25,7 +25,7 @@ namespace OOPadatbazis
                 ISqlStatement sqlStatement = new TableBooks(dbCon.Connection);
 
                 // GetAllBooks
-                var books = sqlStatement.GetAllBooks();
+                var books = sqlStatement.GetAllRecords();
                 foreach (var b in books)
                 {
                     var book = b.GetType().GetProperties();
@@ -37,7 +37,7 @@ namespace OOPadatbazis
                 Console.WriteLine(book1[1].Name + ": " + book1[1].GetValue(item[0]));
                 // AddNewBook
                 var book2 = new { title = "harry potter", author = "JKrowling",release = new DateTime(2007, 10, 12) };
-                sqlStatement.AddNewBook(book2);
+                sqlStatement.AddNewRecords(book2);
                 // DeleteById
                 sqlStatement.DeleteById(101);
                 
