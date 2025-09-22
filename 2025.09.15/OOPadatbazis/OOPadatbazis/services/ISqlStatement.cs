@@ -10,5 +10,6 @@ namespace OOPadatbazis.services
     {
         List<Book> GetAllBooks();
         List<Book> GetById(int id);
+        object AddNewBook(object newBook);
     }
 }

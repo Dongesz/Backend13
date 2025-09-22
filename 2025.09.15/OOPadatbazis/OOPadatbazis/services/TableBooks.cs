@@ -7,6 +7,19 @@ internal class TableBooks : ISqlStatement
     private readonly MySqlConnection _conn;
     public TableBooks(MySqlConnection conn) { _conn = conn; }
 
+    public object AddNewBook(object newBook)
+    {
+        string sql = "INSERT INTO books (title, author, releaseDate) VALUES (@title, @author, @releaseDate);";
+        var cmd = new MySqlCommand(sql, _conn);
+        var book = newBook.GetType().GetProperties();
+        cmd.Parameters.AddWithValue("@title", book[0].GetValue(newBook));
+        cmd.Parameters.AddWithValue("@author", book[1].GetValue(newBook));
+        cmd.Parameters.AddWithValue("@releaseDate", book[2].GetValue(newBook));
+
+        cmd.ExecuteNonQuery();
+        return book;
+    }
+
     public List<Book> GetAllBooks()
     {
         var result = new List<Book>();
@@ -37,9 +50,9 @@ internal class TableBooks : ISqlStatement
     {
         var result = new List<Book>();
         string sql = "select * from books where id = @id";
-        MySqlCommand cmd = new MySqlCommand(sql, _conn);
+        using MySqlCommand cmd = new MySqlCommand(sql, _conn);
         cmd.Parameters.AddWithValue("@id", id);
-        MySqlDataReader reader = cmd.ExecuteReader();
+        using MySqlDataReader reader = cmd.ExecuteReader();
 
         int ixId = reader.GetOrdinal("id");
         int ixTitle = reader.GetOrdinal("title");
