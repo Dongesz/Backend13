@@ -32,4 +32,29 @@ internal class TableBooks : ISqlStatement
         }
         return result;
     }
+
+    public List<Book> GetById(int id)
+    {
+        var result = new List<Book>();
+        string sql = "select * from books where id = @id";
+        MySqlCommand cmd = new MySqlCommand(sql, _conn);
+        cmd.Parameters.AddWithValue("@id", id);
+        MySqlDataReader reader = cmd.ExecuteReader();
+
+        int ixId = reader.GetOrdinal("id");
+        int ixTitle = reader.GetOrdinal("title");
+        int ixAuthor = reader.GetOrdinal("author");
+        int ixRelease = reader.GetOrdinal("releaseDate");
+        while(reader.Read()) 
+        {
+            var book = new Book(
+               reader.GetInt32(ixId),
+               reader.GetString(ixTitle),
+               reader.GetString(ixAuthor),
+               reader.IsDBNull(ixRelease) ? DateTime.MinValue : reader.GetDateTime(ixRelease)
+            );
+            result.Add(book);
+        }
+        return result;
+    }
 }

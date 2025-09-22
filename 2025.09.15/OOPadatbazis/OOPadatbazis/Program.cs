@@ -30,6 +30,9 @@ namespace OOPadatbazis
                     var book = b.GetType().GetProperties();
                     Console.WriteLine(book[0].GetValue(b) + " " +  book[1].GetValue(b) + " " + book[2].GetValue(b) + " " + book[3].GetValue(b));
                 }
+                var item = sqlStatement.GetById(1);
+                var book1 = item[0].GetType().GetProperties();
+                Console.WriteLine(book1[1].Name + ": " + book1[1].GetValue(item[0]));
             }
 
             dbCon.Close();
