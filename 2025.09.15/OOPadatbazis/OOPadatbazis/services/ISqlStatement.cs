@@ -9,9 +9,9 @@ namespace OOPadatbazis.services
     internal interface ISqlStatement
     {
         List<Book> GetAllRecords();
-        List<Book> GetById(int id);
+        Book? GetById(int id);
         object AddNewRecords(object newBook);
         object DeleteById(int id);
-        object UpdateRecord(int id);
+        object UpdateRecord(int id, object updateobj);
     }
 }

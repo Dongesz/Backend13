@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using OOPadatbazis.services;
 using OOPadatbazis;
+using Mysqlx.Crud;
+using static System.Reflection.Metadata.BlobBuilder;
 
 internal class TableBooks : ISqlStatement
 {
@@ -56,33 +58,42 @@ internal class TableBooks : ISqlStatement
         return result;
     }
 
-    public List<Book> GetById(int id)
+    public Book? GetById(int id)
     {
-        var result = new List<Book>();
-        string sql = "select * from books where id = @id";
-        using MySqlCommand cmd = new MySqlCommand(sql, _conn);
-        cmd.Parameters.AddWithValue("@id", id);
-        using MySqlDataReader reader = cmd.ExecuteReader();
+        const string sql = "SELECT id, title, author, releaseDate FROM books WHERE id = @id LIMIT 1";
+        using var cmd = new MySqlCommand(sql, _conn);
+        cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+
+        using var reader = cmd.ExecuteReader();
+
+        if (!reader.Read())
+            return null;
 
         int ixId = reader.GetOrdinal("id");
         int ixTitle = reader.GetOrdinal("title");
         int ixAuthor = reader.GetOrdinal("author");
         int ixRelease = reader.GetOrdinal("releaseDate");
-        while(reader.Read()) 
-        {
-            var book = new Book(
-               reader.GetInt32(ixId),
-               reader.GetString(ixTitle),
-               reader.GetString(ixAuthor),
-               reader.IsDBNull(ixRelease) ? DateTime.MinValue : reader.GetDateTime(ixRelease)
-            );
-            result.Add(book);
-        }
-        return result;
+
+        return new Book(
+            reader.GetInt32(ixId),
+            reader.GetString(ixTitle),
+            reader.GetString(ixAuthor),
+            reader.IsDBNull(ixRelease) ? DateTime.MinValue : reader.GetDateTime(ixRelease)
+        );
     }
 
-    public object UpdateRecord(int id)
+
+    public object UpdateRecord(int id, object updateobj)
     {
+        string sql = "UPDATE books SET title = @title, author = @author, releaseDate = @releaseDate WHERE id = @id; ";
+        MySqlCommand cmd = new MySqlCommand(sql, _conn);
+        var book = updateobj.GetType().GetProperties();
+        cmd.Parameters.AddWithValue("@id", id);
+        cmd.Parameters.AddWithValue("@title", book[0]);
+        cmd.Parameters.AddWithValue("@author", book[1]);
+        cmd.Parameters.AddWithValue("@releaseDate", book[2]);
+        cmd.ExecuteNonQuery();
+        return new { Message = "Update successful!" };
         
     }
 }

@@ -21,6 +21,7 @@ namespace OOPadatbazis
 
             if (dbCon.IsConnect())
             {
+                // Set up connection
                 Console.WriteLine("Successful connection!");
                 ISqlStatement sqlStatement = new TableBooks(dbCon.Connection);
 
@@ -32,19 +33,26 @@ namespace OOPadatbazis
                     Console.WriteLine(book[0].GetValue(b) + " " + book[1].GetValue(b) + " " + book[2].GetValue(b) + " " + book[3].GetValue(b));
                 }
                 // GetById
-                var item = sqlStatement.GetById(1);
-                var book1 = item[0].GetType().GetProperties();
-                Console.WriteLine(book1[1].Name + ": " + book1[1].GetValue(item[0]));
+                var book1 = sqlStatement.GetById(1);
+                if (book1 is null) Console.WriteLine("Nincs ilyen ID.");
+                else Console.WriteLine(book1);
+
                 // AddNewBook
                 var book2 = new { title = "harry potter", author = "JKrowling",release = new DateTime(2007, 10, 12) };
                 sqlStatement.AddNewRecords(book2);
                 // DeleteById
                 sqlStatement.DeleteById(101);
-                
-                
+                //UpdateRecord
+                var book3 = new { title = "harry potter", author = "JKrowling", release = new DateTime(2007, 10, 12) };
+                sqlStatement.UpdateRecord(1, book3);
+
             }
 
             dbCon.Close();
+            
+
+
+
         }
     }
 }
