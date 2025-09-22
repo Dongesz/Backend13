@@ -11,7 +11,7 @@ namespace OOPadatbazis
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {/*
             // Program.Main – csak a lényeg
             var dbCon = DbConnection.Instance();
             dbCon.Server = "localhost";
@@ -49,7 +49,7 @@ namespace OOPadatbazis
             }
 
             dbCon.Close();
-            
+            */
 
 
 
