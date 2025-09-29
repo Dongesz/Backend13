@@ -36,21 +36,19 @@
                      Padding="4"
                      />
         </StackPanel>
-
-        <Button x:Name="RegisterButton"
-            Grid.Row="1"
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,16,0,0" >
+            <Button x:Name="LoginButton"
             Content="Register"
-            Width="73"
-            HorizontalAlignment="Left"
-            Margin="244,125,0,220" Click="RegisterButton_Click"/>
-
-        <Button x:Name="SubmitButton"
-            Grid.Row="1"
-            Content="Submit"
+            Width="85"
+            Height="32"
+            Click="RegisterButton_Click"/>
+            
+            <Button x:Name="SubmitButton"
+            Content="Login"
             Width="100"
             Height="32"
-            HorizontalAlignment="Center"
-            Margin="0,336,0,0" Click="SubmitButton_Click"/>
+            Click="SubmitButton_Click"/>
+        </StackPanel>
 
     </Grid>
 </Page>

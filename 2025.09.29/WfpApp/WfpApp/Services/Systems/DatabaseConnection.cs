@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Mysqlx.Connection;
-using WfpApp.Scripts;
+using WfpApp.Services.Interfaces;
 
-namespace WfpApp.Scripts
+namespace WfpApp.Services.Systems
 {
-    public class DatabaseConnection
+    public class DatabaseConnection : IDatabaseConnection
     {
         private readonly string _connectionString;
         public DatabaseConnection(string connectionString)

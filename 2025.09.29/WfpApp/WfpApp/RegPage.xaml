@@ -9,7 +9,6 @@
       Title="RegisterPage">
 
     <Grid Margin="16">
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -17,37 +16,40 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0"
-                   Text="Register New Account"
+                   Text="Register New User"
                    FontSize="18"
                    FontWeight="Bold"
                    HorizontalAlignment="Center"
                    Margin="0,0,0,10"/>
 
-        <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width="280">
-            <TextBlock Text="Username" Margin="0,4,0,4"/>
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width="300">
+            <TextBlock Text="Username" Margin="0,4,0,2"/>
             <TextBox x:Name="UsernameTextBox" Height="28" Padding="4"/>
 
-            <TextBlock Text="Password" Margin="0,10,0,4"/>
-            <PasswordBox x:Name="PasswordBox" Height="28" Padding="4"/>
+            <TextBlock Text="Full Name" Margin="0,10,0,2"/>
+            <TextBox x:Name="FullNameTextBox" Height="28" Padding="4"/>
 
-            <TextBlock Text="Confirm Password" Margin="0,10,0,4"/>
-            <PasswordBox x:Name="ConfirmPasswordBox" Height="28" Padding="4"/>
+            <TextBlock Text="Password" Margin="0,10,0,2"/>
+            <PasswordBox x:Name="PasswordBox1" Height="28" Padding="4"/>
+
+            <TextBlock Text="Confirm Password" Margin="0,10,0,2"/>
+            <PasswordBox x:Name="PasswordBox2" Height="28" Padding="4"/>
+
+            <TextBlock Text="Email" Margin="0,10,0,2"/>
+            <TextBox x:Name="EmailTextBox" Height="28" Padding="4"/>
         </StackPanel>
 
-        <Button x:Name="LoginButton"
-Grid.Row="1"
-Content="Login"
-Width="85"
-HorizontalAlignment="Left"
-Margin="244,191,0,164" Click="LoginButton_Click"/>
-
-        <Button x:Name="SubmitButton"
-                Grid.Row="1"
-                Content="Submit"
-                Width="100"
-                Height="32"
-                HorizontalAlignment="Center"
-                Margin="0,319,0,33"
-                />
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,16,0,0" >
+            <Button x:Name="LoginButton"
+                    Content="Login"
+                    Width="85"
+                    Height="32"
+                    Click="LoginButton_Click"/>
+            <Button x:Name="SubmitButton"
+                    Content="Register"
+                    Width="100"
+                    Height="32"
+                    Click="SubmitButton_Click"/>
+        </StackPanel>
     </Grid>
 </Page>
