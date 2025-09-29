@@ -39,3 +39,7 @@ C:\Users\majorosmm\source\repos\Backend13\2025.09.29\WfpApp\WfpApp\bin\Debug\net
 C:\Users\majorosmm\source\repos\Backend13\2025.09.29\WfpApp\WfpApp\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\majorosmm\source\repos\Backend13\2025.09.29\WfpApp\WfpApp\obj\Debug\net8.0-windows\WfpApp.csproj.AssemblyReference.cache
 C:\Users\majorosmm\source\repos\Backend13\2025.09.29\WfpApp\WfpApp\obj\Debug\net8.0-windows\WfpApp.csproj.Up2Date
+C:\Users\majorosmm\source\repos\Backend13\2025.09.29\WfpApp\WfpApp\obj\Debug\net8.0-windows\AdminPage.g.cs
+C:\Users\majorosmm\source\repos\Backend13\2025.09.29\WfpApp\WfpApp\obj\Debug\net8.0-windows\AdminPage.baml
+C:\Users\majorosmm\source\repos\Backend13\2025.09.29\WfpApp\WfpApp\obj\Debug\net8.0-windows\LoginPage.g.cs
+C:\Users\majorosmm\source\repos\Backend13\2025.09.29\WfpApp\WfpApp\obj\Debug\net8.0-windows\LoginPage.baml

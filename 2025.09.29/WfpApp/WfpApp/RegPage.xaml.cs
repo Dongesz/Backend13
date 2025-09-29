@@ -20,9 +20,16 @@ namespace WfpApp
     /// </summary>
     public partial class RegPage : Page
     {
-        public RegPage()
+        private readonly Frame _mainframe;
+        public RegPage( Frame mainframe)
         {
             InitializeComponent();
+            _mainframe = mainframe;
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            _mainframe.Navigate(new LoginPage(_mainframe));
         }
     }
 }

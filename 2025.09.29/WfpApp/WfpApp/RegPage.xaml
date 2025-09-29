@@ -6,10 +6,48 @@
       xmlns:local="clr-namespace:WfpApp"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="RegPage">
+      Title="RegisterPage">
 
-    <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    <Grid Margin="16">
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Register New Account"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width="280">
+            <TextBlock Text="Username" Margin="0,4,0,4"/>
+            <TextBox x:Name="UsernameTextBox" Height="28" Padding="4"/>
+
+            <TextBlock Text="Password" Margin="0,10,0,4"/>
+            <PasswordBox x:Name="PasswordBox" Height="28" Padding="4"/>
+
+            <TextBlock Text="Confirm Password" Margin="0,10,0,4"/>
+            <PasswordBox x:Name="ConfirmPasswordBox" Height="28" Padding="4"/>
+        </StackPanel>
+
+        <Button x:Name="LoginButton"
+Grid.Row="1"
+Content="Login"
+Width="85"
+HorizontalAlignment="Left"
+Margin="244,191,0,164" Click="LoginButton_Click"/>
+
+        <Button x:Name="SubmitButton"
+                Grid.Row="1"
+                Content="Submit"
+                Width="100"
+                Height="32"
+                HorizontalAlignment="Center"
+                Margin="0,319,0,33"
+                />
     </Grid>
 </Page>
