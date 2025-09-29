@@ -9,6 +9,7 @@
       Title="RegPage">
 
     <Grid>
-        
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Page>
