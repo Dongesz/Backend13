@@ -6,7 +6,40 @@
         xmlns:local="clr-namespace:WfpApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>   
+            <RowDefinition Height="*"/>     
+            <RowDefinition Height="Auto"/> 
+        </Grid.RowDefinitions>
 
+        <TextBlock Grid.Row="0"
+                   Text="Computer Shop"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width="280">
+            <TextBlock Text="Username" Margin="0,4,0,4"/>
+            <TextBox x:Name="UsernameTextBox"
+                     Height="28"
+                     Padding="4"
+                     />
+
+            <TextBlock Text="Password" Margin="0,10,0,4"/>
+            <PasswordBox x:Name="PasswordBox"
+                         Height="28"
+                         Padding="4"
+                         />
+        </StackPanel>
+
+        <Button x:Name="SubmitButton"
+                Grid.Row="2"
+                Content="Submit"
+                Width="100"
+                Height="32"
+                HorizontalAlignment="Center"
+                Margin="0,12,0,0"/>
     </Grid>
 </Window>
