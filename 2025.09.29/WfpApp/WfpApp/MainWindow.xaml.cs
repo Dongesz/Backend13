@@ -23,7 +23,5 @@ namespace WfpApp
             MainFrame.Navigate(new LoginPage(MainFrame)); // átadjuk a Frame-et a LoginPage-nek
 
         }
-
-
     }
 }

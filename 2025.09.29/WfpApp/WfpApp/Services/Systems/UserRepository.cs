@@ -45,21 +45,47 @@ namespace WfpApp.Services.Systems
             }
             return false;
         }
+        // Read all
         public async Task<ICollection<string>> GetDataAsync()
         {
             using var conn = await _db.GetOpenConnectionAsync();
-            using var cmd = new MySqlCommand("SELECT Username FROM users;", conn);
+            using var cmd = new MySqlCommand("SELECT Id, Username, FullName, Email, Password FROM users;", conn);
 
             var users = new List<string>();
             using var reader = await cmd.ExecuteReaderAsync();
             while (await reader.ReadAsync())
             {
-                users.Add(reader.GetString("Username"));
+                int id = reader.GetInt32("Id");
+                string username = reader.GetString("Username");
+                string fullname = reader.GetString("FullName");
+                string email = reader.GetString("Email");
+                string password = reader.GetString("Password");
+
+                users.Add($"{id}|{username}|{fullname}|{email}|{password}");
             }
             return users;
         }
+        // Read by id
+        public async Task<string> GetUserByIdAsync(int id)
+        {
+            using var conn = await _db.GetOpenConnectionAsync();
+            using var cmd = new MySqlCommand("SELECT Id, Username, FullName, Email, Password FROM users WHERE Id = @id LIMIT 1;", conn);
+            cmd.Parameters.AddWithValue("@id", id);
 
-        public async Task<bool> UpdateDataAsync(string password1, string password2, string username, string fullname, string email)
+            using var reader = await cmd.ExecuteReaderAsync();
+            if (await reader.ReadAsync())
+            {
+                int uid = reader.GetInt32("Id");
+                string username = reader.GetString("Username");
+                string fullname = reader.GetString("FullName");
+                string email = reader.GetString("Email");
+                string password = reader.GetString("Password");
+                return $"{uid}|{username}|{fullname}|{email}|{password}";
+            }
+            return null;
+        }
+        // Update by id
+        public async Task<bool> UpdateDataAsync(string password1, string password2, string username, string fullname, string email, int id)
         {
 
             using var conn = await _db.GetOpenConnectionAsync();
@@ -68,20 +94,21 @@ namespace WfpApp.Services.Systems
             cmd.Parameters.AddWithValue("@fullname", fullname);
             cmd.Parameters.AddWithValue("@password", password1);
             cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@id", id);
             int affectedRows = await cmd.ExecuteNonQueryAsync();
             return affectedRows > 0;
         }
-
-        public async Task<bool> DeleteDataAsync(string username)
+        // Delete by id
+        public async Task<bool> DeleteDataAsync(int id)
         {
             using var conn = await _db.GetOpenConnectionAsync();
-            using var cmd = new MySqlCommand("DELETE FROM users WHERE Username = @username", conn);
-            cmd.Parameters.AddWithValue("@username", username);
-
+            using var cmd = new MySqlCommand("DELETE FROM users WHERE Id = @id", conn);
+            cmd.Parameters.AddWithValue("@id", id);
             int affectedRows = await cmd.ExecuteNonQueryAsync();
             return affectedRows > 0;
         }
 
+        // Create 
         public  async Task<bool> CreateDataAsync(string password1, string password2, string username, string fullname, string email)
         {
             using var conn = await _db.GetOpenConnectionAsync();
