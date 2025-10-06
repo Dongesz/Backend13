@@ -135,11 +135,12 @@ namespace WfpApp
                 UsernameTextBox.Text = fields[1];
                 FullNameTextBox.Text = fields[2];
                 EmailTextBox.Text = fields[3];
-                PasswordBox1.Password = fields[4];
-                PasswordBox2.Password = fields[4];
+                PasswordBox1.Password = "";
+                PasswordBox2.Password = "";
             }
         }
 
+        // navigation to login
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.NavigationService != null && this.NavigationService.CanGoBack)
@@ -149,6 +150,7 @@ namespace WfpApp
             }
         }
 
+        // clear all input and selected item 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
             UsernameTextBox.Text = "";

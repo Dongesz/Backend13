@@ -20,7 +20,7 @@ namespace WfpApp
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new LoginPage(MainFrame)); // átadjuk a Frame-et a LoginPage-nek
+            MainFrame.Navigate(new LoginPage(MainFrame)); 
 
         }
     }

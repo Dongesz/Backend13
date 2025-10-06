@@ -36,22 +36,21 @@ namespace WfpApp
 
         private async void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 var result = await _userRepository.TryLoginAsync(PasswordBox.Password, UsernameTextBox.Text);
                 if (result)
                 {
-                    _mainFrame.Navigate(new AdminPage());
+                    _mainFrame.Navigate(new AdminPage(_mainFrame));
                 }
-                else MessageBox.Show("Hibas bejelentkezesi adatok!");
+                else
+                {
+                    MessageBox.Show("Hibás bejelentkezési adatok!");
+                }
             }
             catch (Exception ex)
             {
-                {
-                    MessageBox.Show($"Hiba tortent: {ex.Message}");
-                }
-
+                MessageBox.Show($"Hiba történt: {ex.Message}");
             }
         }
 
