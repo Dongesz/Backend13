@@ -15,7 +15,17 @@ namespace ConsoleApp1.Services
         public void AddCar(string brand, string type, string license, int date)
         {
             conn._connection.Open();
-       
+            string sql = "insert into Cars (Brand, Type, License, Date) values (@brand, @type, @license, @date);";
+            
+            MySqlCommand cmd = new MySqlCommand(sql, conn._connection);
+            cmd.Parameters.AddWithValue("@brand", brand);
+            cmd.Parameters.AddWithValue("@type", type);
+            cmd.Parameters.AddWithValue("@license", license);
+            cmd.Parameters.AddWithValue("@date", date);
+
+            cmd.ExecuteNonQuery();
+
+            conn._connection.Close();
 
         }
 
