@@ -33,7 +33,12 @@ namespace ConsoleApp1.Services
 
         public void DeleteCar(int id)
         {
-            throw new NotImplementedException();
+            conn._connection.Open();
+            string sql = "DELETE FROM `cars` WHERE Id = @id";
+            MySqlCommand mySqlCommand = new MySqlCommand(sql, conn._connection);
+            mySqlCommand.Parameters.AddWithValue("@id", id);
+            mySqlCommand.ExecuteNonQuery();
+            conn._connection.Close();
         }
 
         public void GetAllCar()
