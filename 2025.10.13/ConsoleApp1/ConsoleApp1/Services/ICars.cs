@@ -10,13 +10,13 @@ namespace ConsoleApp1.Services
     public interface ICars
     {
         // Create
-        public void AddCar(string brand, string type, string license, int date);
+        void AddCar(string brand, string type, string license, int date);
         // Read
-        public void GetAllCar();
+        void GetAllCar();
         // Update
-        public void UpdateCar(int id, string brand, string type, string license, int date);
+        void UpdateCar(int id, string brand, string type, string license, int date);
         // Delete
-        public void DeleteCar(int id);
+        void DeleteCar(int id);
         
     }
 }

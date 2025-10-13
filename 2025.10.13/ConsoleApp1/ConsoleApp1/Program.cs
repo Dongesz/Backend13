@@ -7,13 +7,13 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Cars cars = new Cars();
-            //Feladat1
+            //Feladat1 Kérdezze le az összes autó Márkáját és azonosítóját,
             cars.GetAllCar();
-            //Feladat2
-            cars.AddCar("Mazda", "MIata", "asdasd", 2011);
-            //Feladat3
+            //Feladat2 Adjon hozzá egy új autót az adatbázishoz,
+            cars.AddCar("Mazda", "Miata", "3573467", 2011);
+            //Feladat3 Módosítsa a 123. azonosítójú autó gyártási évét,
             cars.UpdateCarDate(123, 2012107);
-            //Feladat4
+            //Feladat4 Törölje az 257-es id-val rendelkező autó adatait.
             cars.DeleteCar(257);
 
         }
