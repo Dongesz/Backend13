@@ -7,15 +7,15 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Cars cars = new Cars();
-
+            //Feladat1
             cars.GetAllCar();
+            //Feladat2
             cars.AddCar("Mazda", "MIata", "asdasd", 2011);
-            cars.UpdateCar(301, "Mitsubishi", "Eclips", "asdasdasd", 2007);
-            cars.DeleteCar(302);
-            cars.DeleteCar(303);
-            cars.DeleteCar(304);
-            cars.DeleteCar(305);
-            cars.DeleteCar(306);
+            //Feladat3
+            cars.UpdateCarDate(123, 2012107);
+            //Feladat4
+            cars.DeleteCar(257);
+
         }
     }
 }

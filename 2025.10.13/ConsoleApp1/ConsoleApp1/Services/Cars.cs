@@ -76,5 +76,18 @@ namespace ConsoleApp1.Services
 
             conn._connection.Close();
         }
+        public void UpdateCarDate(int id, int date)
+        {
+            conn._connection.Open();
+            string sql = $"UPDATE cars SET Date = @date WHERE Id = @id";
+            MySqlCommand mySqlCommand = new MySqlCommand(sql, conn._connection);
+            mySqlCommand.Parameters.AddWithValue("@id", id);
+
+            mySqlCommand.Parameters.AddWithValue("@date", date);
+
+            mySqlCommand.ExecuteNonQuery();
+
+            conn._connection.Close();
+        }
     }
 }
