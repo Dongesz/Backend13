@@ -10,6 +10,7 @@ namespace ConsoleApp1
 
             cars.GetAllCar();
             cars.AddCar("Mazda", "MIata", "asdasd", 2011);
+            cars.UpdateCar(301, "Mitsubishi", "Eclips", "asdasdasd", 2007);
         }
     }
 }

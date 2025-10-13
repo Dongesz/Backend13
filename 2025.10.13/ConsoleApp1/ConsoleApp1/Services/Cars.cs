@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using NotesApp.Services;
 
 namespace ConsoleApp1.Services
@@ -54,9 +56,20 @@ namespace ConsoleApp1.Services
 
         }
 
-        public void UpdateCar(int id)
+        public void UpdateCar(int id, string brand, string type, string license, int date)
         {
-            throw new NotImplementedException();
+            conn._connection.Open();
+            string sql = $"UPDATE cars SET Brand = @brand, Type = @type, License = @license, Date = @date WHERE Id = @id";
+            MySqlCommand mySqlCommand = new MySqlCommand (sql, conn._connection);
+            mySqlCommand.Parameters.AddWithValue("@id", id);
+            mySqlCommand.Parameters.AddWithValue("@brand", brand);
+            mySqlCommand.Parameters.AddWithValue("@type", type);
+            mySqlCommand.Parameters.AddWithValue("@license", license);
+            mySqlCommand.Parameters.AddWithValue("@date", date);
+
+            mySqlCommand.ExecuteNonQuery();
+
+            conn._connection.Close();
         }
     }
 }

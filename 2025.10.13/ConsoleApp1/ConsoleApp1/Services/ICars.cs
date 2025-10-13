@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 
 namespace ConsoleApp1.Services
 {
@@ -13,7 +14,7 @@ namespace ConsoleApp1.Services
         // Read
         public void GetAllCar();
         // Update
-        public void UpdateCar(int id);
+        public void UpdateCar(int id, string brand, string type, string license, int date);
         // Delete
         public void DeleteCar(int id);
         
