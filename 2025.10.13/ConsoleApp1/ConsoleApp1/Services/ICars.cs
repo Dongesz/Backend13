@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Services
 {
-    public class ICars
+    public interface ICars
     {
+        // Create
+        public void AddCar(string brand, string type, string license, int date);
+        // Read
+        public void GetAllCar();
+        // Update
+        public void UpdateCar(int id);
+        // Delete
+        public void DeleteCar(int id);
+        
     }
 }

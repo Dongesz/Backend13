@@ -8,7 +8,7 @@ namespace NotesApp.Services
 
         public Connect()
         {
-            string connString = "server=localhost;database=notesdb;uid=root;pwd=;";
+            string connString = "server=localhost;database=auto;uid=root;pwd=;";
             _connection = new MySqlConnection(connString);
         }
     }
