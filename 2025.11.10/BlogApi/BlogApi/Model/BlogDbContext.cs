@@ -3,6 +3,7 @@ namespace BlogApi.Model
 {
     public class BlogDbContext : DbContext
     {
+        public DbSet<Blogger> bloggers { get; set; }
         public BlogDbContext()
         {
 
@@ -10,6 +11,11 @@ namespace BlogApi.Model
         public BlogDbContext(DbContextOptions options) :base(options) 
         {
 
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
+        {
+            optionbuilder.UseMySQL("SERVER=localhost;DATABASE=Blog;USER=root;PASSWORD=");
         }
     }
 }
