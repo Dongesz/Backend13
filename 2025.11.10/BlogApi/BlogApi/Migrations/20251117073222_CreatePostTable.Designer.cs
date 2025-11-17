@@ -3,6 +3,7 @@ using System;
 using BlogApi.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogApi.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    partial class BlogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251117073222_CreatePostTable")]
+    partial class CreatePostTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,14 +65,16 @@ namespace BlogApi.Migrations
 
                     b.Property<string>("Category")
                         .IsRequired()
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("longtext")
+                        .HasColumnName("varchar(20)");
 
                     b.Property<DateTime>("Modtime")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Post")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("longtext")
+                        .HasColumnName("text");
 
                     b.Property<DateTime>("Regtime")
                         .HasColumnType("datetime(6)");

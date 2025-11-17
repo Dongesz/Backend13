@@ -4,6 +4,7 @@ namespace BlogApi.Model
     public class BlogDbContext : DbContext
     {
         public DbSet<Blogger> bloggers { get; set; }
+        public DbSet<Posts> posts { get; set; }
         public BlogDbContext()
         {
 

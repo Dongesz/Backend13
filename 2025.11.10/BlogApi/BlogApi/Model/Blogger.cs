@@ -14,5 +14,6 @@ namespace BlogApi.Model
         public string? Phone {  get; set; }
         public DateTime RegTime { get; set; } = DateTime.Now;
         public DateTime ModTime { get; set; } = DateTime.Now;
+        public virtual ICollection<Posts> Posts { get; set; } = new List<Posts>();
     }
 }
