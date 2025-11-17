@@ -1,11 +1,18 @@
-﻿namespace BlogApi.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BlogApi.Model
 {
     public class Blogger
     {
         public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Email { get; set; }
+        [Required]
         public string Password { get; set; }
-        public DateTime RegTime{ get; set; }
+        public string? Phone {  get; set; }
+        public DateTime RegTime { get; set; } = DateTime.Now;
+        public DateTime ModTime { get; set; } = DateTime.Now;
     }
 }
