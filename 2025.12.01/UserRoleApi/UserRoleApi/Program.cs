@@ -12,6 +12,7 @@ namespace UserRoleApi
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<DatabaseContext>();
             builder.Services.AddScoped<IUser, UserService>();
+            builder.Services.AddScoped<IRoles, RolesService>();
 
             // Add services to the container.
 
