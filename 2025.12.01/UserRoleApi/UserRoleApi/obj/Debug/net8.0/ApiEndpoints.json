@@ -156,5 +156,84 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserRoleApi.Controllers.UserRolesController",
+    "Method": "AddNewUserRole",
+    "RelativePath": "api/UserRoles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "UserRoleApi.Models.DTOs.UserRoleSendDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserRoleApi.Controllers.UserRolesController",
+    "Method": "GetAllUserRoles",
+    "RelativePath": "api/UserRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserRoleApi.Controllers.UserRolesController",
+    "Method": "GetById",
+    "RelativePath": "api/UserRoles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserRoleApi.Controllers.UserRolesController",
+    "Method": "UpdateUserRole",
+    "RelativePath": "api/UserRoles/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "UserRoleApi.Models.DTOs.UserRolesUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserRoleApi.Controllers.UserRolesController",
+    "Method": "DeleteUserRole",
+    "RelativePath": "api/UserRoles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
