@@ -1,5 +1,7 @@
 
 using UserRoleApi.Models;
+using UserRoleApi.Services;
+using UserRoleApi.Services.IServices;
 
 namespace UserRoleApi
 {
@@ -9,6 +11,7 @@ namespace UserRoleApi
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<DatabaseContext>();
+            builder.Services.AddScoped<IUser, UserService>();
 
             // Add services to the container.
 
