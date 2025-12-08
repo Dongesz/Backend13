@@ -13,6 +13,7 @@ namespace WebApplication1
             // Add services to the container.
             builder.Services.AddDbContext<DatabaseContext>();
             builder.Services.AddScoped<IRendeles, RendelesService>();
+            builder.Services.AddScoped<ITermekek, TermekService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

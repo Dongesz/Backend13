@@ -8,5 +8,15 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.TermekController",
+    "Method": "GetAllRendeles",
+    "RelativePath": "api/Termek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
