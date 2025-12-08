@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "WebApplication1.Services.RendelesController",
+    "Method": "GetAllRendeles",
+    "RelativePath": "api/Rendeles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

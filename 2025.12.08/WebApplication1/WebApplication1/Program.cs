@@ -1,4 +1,7 @@
 
+using WebApplication1.Models;
+using WebApplication1.Services;
+using WebApplication1.Services.Interfaces;
 namespace WebApplication1
 {
     public class Program
@@ -8,6 +11,8 @@ namespace WebApplication1
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddDbContext<DatabaseContext>();
+            builder.Services.AddScoped<IRendeles, RendelesService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
