@@ -89,5 +89,22 @@ namespace WebApplication1.Services.Controllers
             if (response == null) return NotFound();
             return Ok(response);
         }
+
+        [HttpGet("legdragabb-rendeles")]
+        public async Task<ActionResult> GetLegdragabbRendeles()
+        {
+            var response = await _service.GetLegdragabbRendeles();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
+
+        [HttpGet("rendelesek-szama-asztalonkent")]
+        public async Task<ActionResult> GetAsztalokHanyszorRendeltek()
+        {
+            var response = await _service.GetAsztalokHanyszorRendeltek();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
+
     }
 }

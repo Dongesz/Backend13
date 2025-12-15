@@ -67,8 +67,28 @@
   },
   {
     "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetLegdragabbRendeles",
+    "RelativePath": "api/Rendeles/legdragabb-rendeles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
     "Method": "GetRendelesekOsszerteke",
     "RelativePath": "api/Rendeles/rendelesek-osszertek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetAsztalokHanyszorRendeltek",
+    "RelativePath": "api/Rendeles/rendelesek-szama-asztalonkent",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -107,8 +127,18 @@
   },
   {
     "ContainingType": "WebApplication1.Services.Controllers.TermekController",
+    "Method": "GetLegnepszerubbTermek",
+    "RelativePath": "api/Termek/legnepszerubb-termek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.TermekController",
     "Method": "GetAllRendeles",
-    "RelativePath": "api/Termek",
+    "RelativePath": "api/Termek/osszes-termek",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

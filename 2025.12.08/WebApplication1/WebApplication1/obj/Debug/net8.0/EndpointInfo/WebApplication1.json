@@ -144,7 +144,43 @@
         }
       }
     },
-    "/api/Termek": {
+    "/api/Rendeles/legdragabb-rendeles": {
+      "get": {
+        "tags": [
+          "Rendeles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Rendeles/rendelesek-szama-asztalonkent": {
+      "get": {
+        "tags": [
+          "Rendeles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Termek/osszes-termek": {
+      "get": {
+        "tags": [
+          "Termek"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Termek/legnepszerubb-termek": {
       "get": {
         "tags": [
           "Termek"

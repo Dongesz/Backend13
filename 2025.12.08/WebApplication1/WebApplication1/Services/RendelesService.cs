@@ -276,6 +276,61 @@ namespace WebApplication1.Services
                 return _responseDto;
             }
         }
+        public async Task<ResponseDto> GetLegdragabbRendeles()
+        {
+            try
+            {
+                    var result = await _context.Kapcsolos
+                     .Include(x => x.Termekek)
+                     .GroupBy(x => x.RendelesId)
+                     .Select(g => new
+                     {
+                         RendelesId = g.Key,
+                         OsszErtek = g.Sum(x => x.Termekek.Ar)
+                     })
+                     .OrderByDescending(x => x.OsszErtek)
+                     .FirstOrDefaultAsync();
 
+
+                _responseDto.Message = "Sikeres lekérdezés";
+                _responseDto.Result = result;
+                _responseDto.Success = true;
+                return _responseDto;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
+
+        public async Task<ResponseDto> GetAsztalokHanyszorRendeltek()
+        {
+            try
+            {
+                var result = await _context.Rendeles
+                 .GroupBy(x => x.AsztalSzam)
+                 .Select(g => new 
+                 {
+                     Id = g.Key,
+                     Rendelesekszama = g.Count()
+                 }).ToListAsync();
+
+
+                _responseDto.Message = "Sikeres lekérdezés";
+                _responseDto.Result = result;
+                _responseDto.Success = true;
+                return _responseDto;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
     }
 }

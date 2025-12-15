@@ -15,10 +15,18 @@ namespace WebApplication1.Services.Controllers
             _service = service;
         }
 
-        [HttpGet]
+        [HttpGet("osszes-termek")]
         public async Task<ActionResult> GetAllRendeles()
         {
             var rendeles = await _service.GetAllTermek();
+            if (rendeles == null) return NotFound();
+            return Ok(rendeles);
+        }
+
+        [HttpGet("legnepszerubb-termek")]
+        public async Task<ActionResult> GetLegnepszerubbTermek()
+        {
+            var rendeles = await _service.GetLegtobbTermekFogyott();
             if (rendeles == null) return NotFound();
             return Ok(rendeles);
         }

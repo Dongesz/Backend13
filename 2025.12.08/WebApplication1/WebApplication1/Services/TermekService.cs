@@ -37,5 +37,32 @@ namespace WebApplication1.Services
                 return _responseDto;
             }
         }
+        public async Task<ResponseDto> GetLegtobbTermekFogyott()
+        {
+            try
+            {
+                var result = await _context.Kapcsolos
+                    .GroupBy(x => x.TermekekId)
+                    .Select(g => new
+                    {
+                        id = g.Key,
+                        darab = g.Count()
+                    })
+                    .OrderByDescending(x => x.darab)
+                    .FirstOrDefaultAsync();
+                _responseDto.Message = "Sikeres lekerd!";
+                _responseDto.Result = result;
+                _responseDto.Success = true;
+                return _responseDto;
+
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
     }
 }
