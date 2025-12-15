@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Models;
 using WebApplication1.Services.Interfaces;
 
 namespace WebApplication1.Services
@@ -29,6 +30,18 @@ namespace WebApplication1.Services
             if (rendeles == null) return NotFound();
             return Ok(rendeles);
         }
+        [HttpGet("withfood")]
+        public async Task<ActionResult> GetAllRendelesWithFood()
+        {
+            var response = await _service.GetAllRendelesWithFood();
+            if (response != null)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest(response);
+        }
+
 
     }
 }

@@ -8,12 +8,14 @@ namespace WebApplication1.Services
 {
     public class TermekService : ITermekek
     {
-		private readonly DatabaseContext _context;
-        ResponseDto _responseDto = new ResponseDto();
+        private readonly DatabaseContext _context;
+        private readonly ResponseDto _responseDto;
 
-        public TermekService(DatabaseContext context)
+        public TermekService(DatabaseContext context, ResponseDto responseDto)
         {
             _context = context;
+            _responseDto = responseDto;
+
         }
 
         public async Task<ResponseDto> GetAllTermek()

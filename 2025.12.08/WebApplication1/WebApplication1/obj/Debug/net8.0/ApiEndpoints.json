@@ -20,6 +20,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApplication1.Services.RendelesController",
+    "Method": "GetAllRendelesWithFood",
+    "RelativePath": "api/Rendeles/withfood",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApplication1.Services.TermekController",
     "Method": "GetAllRendeles",
     "RelativePath": "api/Termek",

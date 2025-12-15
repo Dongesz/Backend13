@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
+using WebApplication1.Models.Dto;
 using WebApplication1.Services;
 using WebApplication1.Services.Interfaces;
 namespace WebApplication1
@@ -23,6 +24,7 @@ namespace WebApplication1
             
             builder.Services.AddScoped<IRendeles, RendelesService>();
             builder.Services.AddScoped<ITermekek, TermekService>();
+            builder.Services.AddScoped<ResponseDto>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
