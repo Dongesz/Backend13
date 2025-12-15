@@ -168,6 +168,30 @@
         }
       }
     },
+    "/api/Rendeles/fizetesimod-hanyszor": {
+      "get": {
+        "tags": [
+          "Rendeles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Rendeles/asztal-legtobb-koltessel": {
+      "get": {
+        "tags": [
+          "Rendeles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Termek/osszes-termek": {
       "get": {
         "tags": [

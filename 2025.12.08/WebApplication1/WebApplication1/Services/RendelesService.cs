@@ -332,5 +332,62 @@ namespace WebApplication1.Services
                 return _responseDto;
             }
         }
+
+        public async Task<ResponseDto> GetFizetesModHanyszor()
+        {
+            try
+            {
+                var result = await _context.Rendeles
+                 .GroupBy(x => x.FizetesMod)
+                 .Select(g => new
+                 {
+                     Mod = g.Key,
+                     Hanyszor = g.Count()
+                 }).ToListAsync();
+
+
+                _responseDto.Message = "Sikeres lekérdezés";
+                _responseDto.Result = result;
+                _responseDto.Success = true;
+                return _responseDto;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
+
+        public async Task<ResponseDto> GetAsztalLegtobbKoltessel()
+        {
+            try
+            {
+                var result = await _context.Kapcsolos
+                    .Include(x => x.Termekek)
+                    .Include(x => x.Rendeles)
+                    .GroupBy(x => x.Rendeles.AsztalSzam)
+                    .Select(g => new
+                    {
+                        Asztalszam = g.Key,
+                        osszkoltes = g.Sum(x => x.Termekek.Ar)
+                    }).OrderByDescending(x => x.osszkoltes)
+                    .FirstOrDefaultAsync();
+
+
+                _responseDto.Message = "Sikeres lekérdezés";
+                _responseDto.Result = result;
+                _responseDto.Success = true;
+                return _responseDto;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
     }
 }

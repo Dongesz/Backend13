@@ -105,6 +105,20 @@ namespace WebApplication1.Services.Controllers
             if (response == null) return NotFound();
             return Ok(response);
         }
+        [HttpGet("fizetesimod-hanyszor")]
+        public async Task<ActionResult> GetFizetesModHanyszor()
+        {
+            var response = await _service.GetFizetesModHanyszor();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
+        [HttpGet("asztal-legtobb-koltessel")]
+        public async Task<ActionResult> GetAsztalLegtobbKoltessel()
+        {
+            var response = await _service.GetAsztalLegtobbKoltessel();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
 
     }
 }

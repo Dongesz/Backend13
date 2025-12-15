@@ -27,6 +27,26 @@
   },
   {
     "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetAsztalLegtobbKoltessel",
+    "RelativePath": "api/Rendeles/asztal-legtobb-koltessel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetFizetesModHanyszor",
+    "RelativePath": "api/Rendeles/fizetesimod-hanyszor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
     "Method": "GetAllRendelesWithFood",
     "RelativePath": "api/Rendeles/kajaval",
     "HttpMethod": "GET",

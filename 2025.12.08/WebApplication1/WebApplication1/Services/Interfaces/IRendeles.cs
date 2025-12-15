@@ -17,6 +17,9 @@ namespace WebApplication1.Services.Interfaces
         Task<ResponseDto> GetRendelesekOsszerteke();
         Task<ResponseDto> GetLegdragabbRendeles();
         Task<ResponseDto> GetAsztalokHanyszorRendeltek();
+        Task<ResponseDto> GetFizetesModHanyszor();
+        Task<ResponseDto> GetAsztalLegtobbKoltessel();
+
 
 
     }
