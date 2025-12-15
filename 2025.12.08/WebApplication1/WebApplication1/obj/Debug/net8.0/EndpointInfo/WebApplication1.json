@@ -48,7 +48,7 @@
         }
       }
     },
-    "/api/Rendeles/withCard": {
+    "/api/Rendeles/kartyaval": {
       "get": {
         "tags": [
           "Rendeles"
@@ -60,7 +60,43 @@
         }
       }
     },
-    "/api/Rendeles/withfood": {
+    "/api/Rendeles/kajaval": {
+      "get": {
+        "tags": [
+          "Rendeles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Rendeles/tetelek": {
+      "get": {
+        "tags": [
+          "Rendeles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Rendeles/termek-rendeles": {
+      "get": {
+        "tags": [
+          "Rendeles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Rendeles/kola": {
       "get": {
         "tags": [
           "Rendeles"

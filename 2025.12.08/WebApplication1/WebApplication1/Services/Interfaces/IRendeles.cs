@@ -7,7 +7,10 @@ namespace WebApplication1.Services.Interfaces
         Task<ResponseDto> GetAllRendeles();
         Task<ResponseDto> GetAllRendelesWithCard();
         Task<ResponseDto> GetAllRendelesWithFood();
-        
+        Task<ResponseDto> GetRendelesTetelek();
 
+        Task<ResponseDto> GetRendelesenkentTetelek();
+        Task<ResponseDto> GetTermekekRendelesenkent();
+        Task<ResponseDto> GetKolasRendelesek();
     }
 }

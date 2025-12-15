@@ -27,8 +27,8 @@
   },
   {
     "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
-    "Method": "GetAllRendelesWithCard",
-    "RelativePath": "api/Rendeles/withCard",
+    "Method": "GetAllRendelesWithFood",
+    "RelativePath": "api/Rendeles/kajaval",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -37,8 +37,38 @@
   },
   {
     "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
-    "Method": "GetAllRendelesWithFood",
-    "RelativePath": "api/Rendeles/withfood",
+    "Method": "GetAllRendelesWithCard",
+    "RelativePath": "api/Rendeles/kartyaval",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetKolasRendelesek",
+    "RelativePath": "api/Rendeles/kola",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetTermekekRendelesenkent",
+    "RelativePath": "api/Rendeles/termek-rendeles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetRendelesenkentTetelek",
+    "RelativePath": "api/Rendeles/tetelek",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

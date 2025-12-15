@@ -23,14 +23,14 @@ namespace WebApplication1.Services.Controllers
             if (rendeles == null) return NotFound();
             return Ok(rendeles);
         }
-        [HttpGet("withCard")]
+        [HttpGet("kartyaval")]
         public async Task<ActionResult> GetAllRendelesWithCard()
         {
             var rendeles = await _service.GetAllRendelesWithCard();
             if (rendeles == null) return NotFound();
             return Ok(rendeles);
         }
-        [HttpGet("withfood")]
+        [HttpGet("kajaval")]
         public async Task<ActionResult> GetAllRendelesWithFood()
         {
             var response = await _service.GetAllRendelesWithFood();
@@ -41,7 +41,29 @@ namespace WebApplication1.Services.Controllers
 
             return BadRequest(response);
         }
+  
+        [HttpGet("tetelek")]
+        public async Task<ActionResult> GetRendelesenkentTetelek()
+        {
+            var response = await _service.GetRendelesenkentTetelek();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
 
+        [HttpGet("termek-rendeles")]
+        public async Task<ActionResult> GetTermekekRendelesenkent()
+        {
+            var response = await _service.GetTermekekRendelesenkent();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
 
+        [HttpGet("kola")]
+        public async Task<ActionResult> GetKolasRendelesek()
+        {
+            var response = await _service.GetKolasRendelesek();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
     }
 }
