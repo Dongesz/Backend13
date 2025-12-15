@@ -22,6 +22,13 @@ namespace WebApplication1.Services
             if (rendeles == null) return NotFound();
             return Ok(rendeles);
         }
+        [HttpGet("withCard")]
+        public async Task<ActionResult> GetAllRendelesWithCard()
+        {
+            var rendeles = await _service.GetAllRendelesWithCard();
+            if (rendeles == null) return NotFound();
+            return Ok(rendeles);
+        }
 
     }
 }

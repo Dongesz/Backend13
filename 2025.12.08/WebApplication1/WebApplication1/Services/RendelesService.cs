@@ -35,5 +35,46 @@ namespace WebApplication1.Services
                 return _responseDto;
             }
         }
+
+        public async Task<ResponseDto> GetAllRendelesWithCard()
+        {
+            try
+            {
+                var rendeles = await _context.Rendeles.Where(x => x.FizetesMod == "Kártya").ToListAsync();
+                _responseDto.Message = "Sikeres lekerd!";
+                _responseDto.Result = rendeles;
+                _responseDto.Success = true;
+                return _responseDto;
+
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
+
+        public async Task<ResponseDto> GetAllRendelesWithFood()
+        {
+            try
+            {
+                //var rendeles = await _context.Rendeles.Include(x => x.Kapcsolos).ThenInclude(x => x.Rendeles.Id,).ToListAsync();
+                _responseDto.Message = "Sikeres lekerd!";
+                _responseDto.Result = null;
+                _responseDto.Success = true;
+                return _responseDto;
+
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+
+        }
     }
 }

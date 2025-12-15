@@ -17,6 +17,18 @@
         }
       }
     },
+    "/api/Rendeles/withCard": {
+      "get": {
+        "tags": [
+          "Rendeles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Termek": {
       "get": {
         "tags": [

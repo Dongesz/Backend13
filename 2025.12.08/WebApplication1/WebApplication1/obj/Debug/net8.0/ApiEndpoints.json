@@ -10,6 +10,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApplication1.Services.RendelesController",
+    "Method": "GetAllRendelesWithCard",
+    "RelativePath": "api/Rendeles/withCard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApplication1.Services.TermekController",
     "Method": "GetAllRendeles",
     "RelativePath": "api/Termek",

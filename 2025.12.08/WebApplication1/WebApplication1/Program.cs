@@ -1,4 +1,5 @@
 
+using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
 using WebApplication1.Services;
 using WebApplication1.Services.Interfaces;
@@ -11,7 +12,15 @@ namespace WebApplication1
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddDbContext<DatabaseContext>();
+            builder.Services.AddDbContext<DatabaseContext>(
+                option =>
+                {
+                    var ConnectionString = builder.Configuration.GetConnectionString("MySql");
+                    option.UseMySQL(ConnectionString);
+                }
+                );
+            
+            
             builder.Services.AddScoped<IRendeles, RendelesService>();
             builder.Services.AddScoped<ITermekek, TermekService>();
 
