@@ -5,6 +5,37 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Kapcsolo": {
+      "post": {
+        "tags": [
+          "Kapcsolo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRelationDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRelationDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRelationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Rendeles": {
       "get": {
         "tags": [
@@ -54,5 +85,22 @@
       }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "AddRelationDto": {
+        "type": "object",
+        "properties": {
+          "rendelesId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "termekekId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }

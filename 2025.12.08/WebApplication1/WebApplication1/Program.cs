@@ -24,6 +24,7 @@ namespace WebApplication1
             
             builder.Services.AddScoped<IRendeles, RendelesService>();
             builder.Services.AddScoped<ITermekek, TermekService>();
+            builder.Services.AddScoped<IKapcsolo, KapcsoloServices>();
             builder.Services.AddScoped<ResponseDto>();
 
             builder.Services.AddControllers();

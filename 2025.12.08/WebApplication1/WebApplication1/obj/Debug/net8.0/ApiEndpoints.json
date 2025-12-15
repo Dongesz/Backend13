@@ -1,6 +1,22 @@
 [
   {
-    "ContainingType": "WebApplication1.Services.RendelesController",
+    "ContainingType": "WebApplication1.Services.Controllers.KapcsoloController",
+    "Method": "PostRelation",
+    "RelativePath": "api/Kapcsolo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addRelationDto",
+        "Type": "WebApplication1.Models.Dto.AddRelationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
     "Method": "GetAllRendeles",
     "RelativePath": "api/Rendeles",
     "HttpMethod": "GET",
@@ -10,7 +26,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApplication1.Services.RendelesController",
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
     "Method": "GetAllRendelesWithCard",
     "RelativePath": "api/Rendeles/withCard",
     "HttpMethod": "GET",
@@ -20,7 +36,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApplication1.Services.RendelesController",
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
     "Method": "GetAllRendelesWithFood",
     "RelativePath": "api/Rendeles/withfood",
     "HttpMethod": "GET",
@@ -30,7 +46,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApplication1.Services.TermekController",
+    "ContainingType": "WebApplication1.Services.Controllers.TermekController",
     "Method": "GetAllRendeles",
     "RelativePath": "api/Termek",
     "HttpMethod": "GET",
