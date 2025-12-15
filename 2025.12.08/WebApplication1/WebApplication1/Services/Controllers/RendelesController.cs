@@ -65,5 +65,29 @@ namespace WebApplication1.Services.Controllers
             if (response == null) return NotFound();
             return Ok(response);
         }
+
+        [HttpGet("tetelszam")]
+        public async Task<ActionResult> GetRendelesekTetelszama()
+        {
+            var response = await _service.GetRendelesekTetelszama();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
+
+        [HttpGet("kettes-osszertek")]
+        public async Task<ActionResult> GetKettesRendelesOsszertek()
+        {
+            var response = await _service.GetKettesRendelesOsszertek();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
+
+        [HttpGet("rendelesek-osszertek")]
+        public async Task<ActionResult> GetRendelesekOsszerteke()
+        {
+            var response = await _service.GetRendelesekOsszerteke();
+            if (response == null) return NotFound();
+            return Ok(response);
+        }
     }
 }

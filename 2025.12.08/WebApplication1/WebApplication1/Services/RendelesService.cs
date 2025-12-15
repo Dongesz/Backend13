@@ -197,5 +197,85 @@ namespace WebApplication1.Services
                 return _responseDto;
             }
         }
+        public async Task<ResponseDto> GetRendelesekTetelszama()
+        {
+            try
+            {
+                var result = await _context.Kapcsolos
+                    .GroupBy(x => x.RendelesId)
+                    .Select(g => new
+                    {
+                        RendelesId = g.Key,
+                        Tetelszam = g.Count()
+                    })
+                    .ToListAsync();
+
+                _responseDto.Message = "Sikeres lekérdezés";
+                _responseDto.Result = result;
+                _responseDto.Success = true;
+                return _responseDto;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
+        public async Task<ResponseDto> GetKettesRendelesOsszertek()
+        {
+            try
+            {
+                var osszeg = await _context.Kapcsolos
+                    .Where(x => x.RendelesId == 2)
+                    .Include(x => x.Termekek)
+                    .SumAsync(x => x.Termekek.Ar);
+
+                _responseDto.Message = "Sikeres lekérdezés";
+                _responseDto.Result = new
+                {
+                    RendelesId = 2,
+                    OsszErtek = osszeg
+                };
+                _responseDto.Success = true;
+                return _responseDto;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
+        public async Task<ResponseDto> GetRendelesekOsszerteke()
+        {
+            try
+            {
+                var result = await _context.Kapcsolos
+                    .Include(x => x.Termekek)
+                    .GroupBy(x => x.RendelesId)
+                    .Select(g => new
+                    {
+                        RendelesId = g.Key,
+                        OsszErtek = g.Sum(x => x.Termekek.Ar)
+                    })
+                    .ToListAsync();
+
+                _responseDto.Message = "Sikeres lekérdezés";
+                _responseDto.Result = result;
+                _responseDto.Success = true;
+                return _responseDto;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Message = ex.Message;
+                _responseDto.Result = null;
+                _responseDto.Success = false;
+                return _responseDto;
+            }
+        }
+
     }
 }

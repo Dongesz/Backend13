@@ -12,5 +12,8 @@ namespace WebApplication1.Services.Interfaces
         Task<ResponseDto> GetRendelesenkentTetelek();
         Task<ResponseDto> GetTermekekRendelesenkent();
         Task<ResponseDto> GetKolasRendelesek();
+        Task<ResponseDto> GetRendelesekTetelszama();
+        Task<ResponseDto> GetKettesRendelesOsszertek();
+        Task<ResponseDto> GetRendelesekOsszerteke();
     }
 }

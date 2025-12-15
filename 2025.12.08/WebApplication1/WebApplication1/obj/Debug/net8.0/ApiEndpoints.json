@@ -47,8 +47,28 @@
   },
   {
     "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetKettesRendelesOsszertek",
+    "RelativePath": "api/Rendeles/kettes-osszertek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
     "Method": "GetKolasRendelesek",
     "RelativePath": "api/Rendeles/kola",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetRendelesekOsszerteke",
+    "RelativePath": "api/Rendeles/rendelesek-osszertek",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -69,6 +89,16 @@
     "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
     "Method": "GetRendelesenkentTetelek",
     "RelativePath": "api/Rendeles/tetelek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Services.Controllers.RendelesController",
+    "Method": "GetRendelesekTetelszama",
+    "RelativePath": "api/Rendeles/tetelszam",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
