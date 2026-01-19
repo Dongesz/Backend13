@@ -1,0 +1,133 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Majoros_Mate_backend",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/actors/feladat9/{name}": {
+      "get": {
+        "tags": [
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/actors/feladat12": {
+      "get": {
+        "tags": [
+          "Actor"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/filmtypes/feladat11": {
+      "get": {
+        "tags": [
+          "FilmType"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/movies/feladat10": {
+      "get": {
+        "tags": [
+          "Movies"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/movies/feladat13": {
+      "post": {
+        "tags": [
+          "Movies"
+        ],
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoviePostDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoviePostDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoviePostDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "MoviePostDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filmTypeId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

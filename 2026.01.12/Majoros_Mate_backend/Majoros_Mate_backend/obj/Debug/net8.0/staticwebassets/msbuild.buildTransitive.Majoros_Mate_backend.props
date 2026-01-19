@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Majoros_Mate_backend.props" />
+</Project>

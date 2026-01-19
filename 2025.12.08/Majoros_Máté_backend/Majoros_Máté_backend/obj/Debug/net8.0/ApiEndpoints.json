@@ -1,0 +1,69 @@
+[
+  {
+    "ContainingType": "Majoros_M\u00E1t\u00E9_backend.Controllers.AuthorsController",
+    "Method": "feladat12",
+    "RelativePath": "api/authors/feladat12",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Majoros_M\u00E1t\u00E9_backend.Controllers.AuthorsController",
+    "Method": "feladat9",
+    "RelativePath": "api/authors/feladat9/{author}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "author",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Majoros_M\u00E1t\u00E9_backend.Controllers.BooksController",
+    "Method": "feladat10",
+    "RelativePath": "api/books/feladat10",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Majoros_M\u00E1t\u00E9_backend.Controllers.BooksController",
+    "Method": "feladat13",
+    "RelativePath": "api/books/feladat13/{UId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "book",
+        "Type": "Majoros_M\u00E1t\u00E9_backend.Models.Dtos.BookSendDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Majoros_M\u00E1t\u00E9_backend.Controllers.CategoriesController",
+    "Method": "feladat11",
+    "RelativePath": "api/categories/feladat11",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

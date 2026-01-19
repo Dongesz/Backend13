@@ -1,0 +1,69 @@
+[
+  {
+    "ContainingType": "Majoros_Mate_backend.Controllers.ActorController",
+    "Method": "GetActorsCount",
+    "RelativePath": "api/actors/feladat12",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Majoros_Mate_backend.Controllers.ActorController",
+    "Method": "GetActors",
+    "RelativePath": "api/actors/feladat9/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Majoros_Mate_backend.Controllers.FilmTypeController",
+    "Method": "GetAllFilmTypes",
+    "RelativePath": "api/filmtypes/feladat11",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Majoros_Mate_backend.Controllers.MoviesController",
+    "Method": "GetAllMovies",
+    "RelativePath": "api/movies/feladat10",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Majoros_Mate_backend.Controllers.MoviesController",
+    "Method": "AddNewMovie",
+    "RelativePath": "api/movies/feladat13",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movie",
+        "Type": "Majoros_Mate_backend.Controllers.MoviePostDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uid",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

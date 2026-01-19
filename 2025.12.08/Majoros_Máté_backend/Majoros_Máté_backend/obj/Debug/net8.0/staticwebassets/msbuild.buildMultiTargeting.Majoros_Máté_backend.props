@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Majoros_Máté_backend.props" />
+</Project>
