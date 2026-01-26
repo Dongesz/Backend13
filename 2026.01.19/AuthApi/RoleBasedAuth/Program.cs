@@ -1,4 +1,12 @@
 
+using Google.Protobuf.WellKnownTypes;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using RoleBasedAuth.Data;
+using RoleBasedAuth.Models;
+using RoleBasedAuth.Models.DTOs;
+using RoleBasedAuth.Services;
+
 namespace RoleBasedAuth
 {
     public class Program
@@ -10,6 +18,14 @@ namespace RoleBasedAuth
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddDbContext<AppDbContext>(x =>
+            {
+                x.UseMySQL(builder.Configuration.GetConnectionString("MySql"));
+            });
+            builder.Services.AddScoped<IAuth, Auth>();
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
+            builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("AuthSettings: JwtOptions"));
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

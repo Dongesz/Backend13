@@ -5,7 +5,7 @@ namespace AuthApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
+    [Authorize(Roles = ("admin, user"))]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
