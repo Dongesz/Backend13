@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "EmailService.Controllers.MailController",
+    "Method": "SendMail",
+    "RelativePath": "api/Mail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "EmailService.Models.DTOs.SendMailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

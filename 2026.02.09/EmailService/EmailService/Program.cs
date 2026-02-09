@@ -1,4 +1,7 @@
 
+using EmailService.Services;
+using EmailService.Services.ISendMail;
+
 namespace EmailService
 {
     public class Program
@@ -6,7 +9,7 @@ namespace EmailService
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            builder.Services.AddScoped<IMail, Mail>();
             // Add services to the container.
 
             builder.Services.AddControllers();
