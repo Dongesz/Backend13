@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "RendszerKez API",
-    "version": "v1"
+    "title": "RendszerKez",
+    "version": "1.0"
   },
   "paths": {
     "/api/auth/login": {
@@ -175,7 +175,6 @@
     "securitySchemes": {
       "Bearer": {
         "type": "http",
-        "description": "JWT Authorization header. Használat: 'Bearer {token}'",
         "scheme": "Bearer",
         "bearerFormat": "JWT"
       }

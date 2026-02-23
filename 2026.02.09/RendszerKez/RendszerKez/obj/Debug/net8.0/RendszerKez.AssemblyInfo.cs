@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RendszerKez")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+caa6bea0c7f1e92a2979a95a4ba7470e50ff5181")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6aac4e2ae1775d3866c76d9d6a480582e10655f")]
 [assembly: System.Reflection.AssemblyProductAttribute("RendszerKez")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RendszerKez")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

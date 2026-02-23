@@ -42,17 +42,11 @@ namespace RendszerKez
                     };
                 });
 
+            // Authorize box swaggeren
             builder.Services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
-                {
-                    Title = "RendszerKez API",
-                    Version = "v1"
-                });
-
                 c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
                 {
-                    Description = "JWT Authorization header. Használat: 'Bearer {token}'",
                     Name = "Authorization",
                     In = Microsoft.OpenApi.Models.ParameterLocation.Header,
                     Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
