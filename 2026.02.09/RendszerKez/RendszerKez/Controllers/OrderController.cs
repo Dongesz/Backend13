@@ -8,7 +8,6 @@ namespace RendszerKez.Controllers
 {
     [ApiController]
     [Route("api/orders")]
-    [Authorize]
     public class OrdersController : ControllerBase
     {
         private readonly IOrderService _orderService;
@@ -20,6 +19,7 @@ namespace RendszerKez.Controllers
             _userService = userService;
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create(CreateOrderDto dto)
         {
@@ -33,6 +33,7 @@ namespace RendszerKez.Controllers
             return Ok("Order created successfully");
         }
 
+        [Authorize]
         [HttpGet("my")]
         public async Task<IActionResult> MyOrders()
         {
