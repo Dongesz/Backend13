@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mzF8DF5hMyc=",
+  "dgSpecHash": "y+ULy9qJiC8=",
   "success": true,
   "projectFilePath": "C:\\Users\\majorosmm\\source\\repos\\Backend13\\2026.02.09\\RendszerKez\\RendszerKez\\RendszerKez.csproj",
   "expectedPackageFiles": [
@@ -44,8 +44,6 @@
     "C:\\Users\\majorosmm\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\majorosmm\\.nuget\\packages\\mysql.data\\9.6.0\\mysql.data.9.6.0.nupkg.sha512",
     "C:\\Users\\majorosmm\\.nuget\\packages\\mysql.entityframeworkcore\\8.0.22\\mysql.entityframeworkcore.8.0.22.nupkg.sha512",
-    "C:\\Users\\majorosmm\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
-    "C:\\Users\\majorosmm\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.3\\pomelo.entityframeworkcore.mysql.8.0.3.nupkg.sha512",
     "C:\\Users\\majorosmm\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\majorosmm\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\majorosmm\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",

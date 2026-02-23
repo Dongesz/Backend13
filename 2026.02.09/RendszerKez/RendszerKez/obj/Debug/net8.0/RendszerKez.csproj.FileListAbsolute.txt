@@ -32,8 +32,6 @@ C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin
 C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin\Debug\net8.0\Mono.TextTemplating.dll
-C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin\Debug\net8.0\MySqlConnector.dll
-C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\majorosmm\source\repos\Backend13\2026.02.09\RendszerKez\RendszerKez\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
